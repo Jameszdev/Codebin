@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codebin <%= locals.id ? `- ${locals.id}` : ""%></title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js" integrity="sha512-BNc7saQYlxCL10lykUYhFBcnzdKMnjx5fp5s5wPucDyZ7rKNwCoqJh1GwEAIhuePEK4WM9askJBRsu7ma0Rzvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/base16/solarized-dark.min.css" integrity="sha512-kBHeOXtsKtA97/1O3ebZzWRIwiWEOmdrylPrOo3D2+pGhq1m+1CroSOVErIlsqn1xmYowKfQNVDhsczIzeLpmg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+    <div class="wrapper">
+        <%- include("_buttons.ejs", { id: locals.id }) %>
+
+        <div class="line-numbers">
+            <% for (let i = 1; i <= code.split("\n").length; i++) { %>
+                <div><%= i %></div>
+            <% } %>
+        </div>
+        <pre><code id="code-display" class="<%= locals.language ? `language-${locals.language}` : ""%>"><%= code %></code></pre>
+        
+    </div>
+</body>
+</html>
