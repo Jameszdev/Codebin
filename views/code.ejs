@@ -6,6 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Codebin <%= locals.id ? `- ${locals.id}` : ""%></title>
 
+    <meta name="theme-color" content="#4C63FF" />
+    <meta name="url" content="https://codebin.jamesz.dev/<%= locals.id ? `${locals.id}` : ""%>" />
+    <meta name="og:url" content="https://codebin.jamesz.dev/<%= locals.id ? `${locals.id}` : ""%>" />
+    <meta name="og:see_also" content="https://codebin.jamesz.dev/<%= locals.id ? `${locals.id}` : ""%>" />
+    <meta name="twitter:url" content="https://codebin.jamesz.dev/<%= locals.id ? `${locals.id}` : ""%>" />
+    <meta name="og:site_name" content="Codebin" />
+    <meta name="name" content="Codebin <%= locals.id ? `- ${locals.id}` : ""%>" />
+    <meta name="og:title" content="Codebin <%= locals.id ? `- ${locals.id}` : ""%>" />
+    <meta name="twitter:title" content="Codebin <%= locals.id ? `- ${locals.id}` : ""%>" />
+    <meta name="image" content="https://codebin.jamesz.dev/favicon.ico" />
+    <meta name="og:image" content="https://codebin.jamesz.dev/favicon.ico" />
+    <meta name="twitter:image" content="https://codebin.jamesz.dev/favicon.ico" />
+    <meta name="description" content="<%= code %>" />
+    <meta name="og:description" content="<%= code %>" />
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js" integrity="sha512-BNc7saQYlxCL10lykUYhFBcnzdKMnjx5fp5s5wPucDyZ7rKNwCoqJh1GwEAIhuePEK4WM9askJBRsu7ma0Rzvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/base16/solarized-dark.min.css" integrity="sha512-kBHeOXtsKtA97/1O3ebZzWRIwiWEOmdrylPrOo3D2+pGhq1m+1CroSOVErIlsqn1xmYowKfQNVDhsczIzeLpmg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/styles.css" />
